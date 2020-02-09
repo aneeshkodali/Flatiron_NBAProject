@@ -1,6 +1,8 @@
 import statsmodels.api as sm
+import numpy as np
 import scipy.stats as stats
 import itertools
+
 
 def conduct_pairedttest(df, column1, column2):
     """
@@ -79,3 +81,24 @@ def conduct_anova(df, team_names, team_scores):
                 print(f"{pair[1]}'s (t-stat: {round(ttest.statistic, 2)}, p-value: {round(ttest.pvalue, 4)})")
     else:
         print("No team's home court advantage is statistically significant")
+
+
+
+def sample_variance(sample):
+    sample_mean = np.mean(sample)
+    return np.sum((sample - sample_mean) **2)/ (len(sample) -1)
+    
+
+def pooled_variance(sample1, sample2):
+    n_1, n_2 = len(sample1), len(sample2)
+    var_1, var_2 = sample_variance(sample1), sample_variance(sample2)
+    return ((n_1-1) * var_1 + (n_2-1)* var_2)/((n_1 + n_2)-2)
+
+def twosample_tstatistic(sample1, sample2):
+    sample1_mean, sample2_mean = np.mean(sample1), np.mean(sample2)
+    pool_var = pooled_variance(sample1, sample2)
+    sample1_n, sample2_n = len(sample1), len(sample2)
+    num = sample1_mean - sample2_mean
+    denom = np.sqrt(pool_var * ((1/sample1_n)+(1/sample2_n)))
+    return num / denom
+
