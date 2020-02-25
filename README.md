@@ -36,13 +36,13 @@ Not much data cleaning needed. The *home_team* and *visitor_team* columns contai
 
 For the first hypothesis test, we used *home_team_conference* and *visitor_team_conference* to filter the original dataframe to only contain rows where an East team plays a West team. We then subtracted *west_team_score* from *east_team_score* to obtain our variable of interest (*east_minus_west*).
 
-![East Minus West Boxplots](img/EastMinusWestBoxplot.png)
+![East Minus West Boxplot](img/EastMinusWestBoxplot.png)
 
 ![East Minus West Distplot](img/EastMinusWestDistplot.png)
 
 For the second hypothesis test, we created our variable of interest (*homeDiff*) by subtracting *visitor_team_score* from *home_team_score*.
 
-![Home Court Advantage Boxplots](img/HomeCourtAdvBoxplots.png)
+![Home Court Advantage Boxplot](img/HomeCourtAdvBoxplot.png)
 
 
 ## Hypotheses Tests
@@ -69,5 +69,5 @@ As next steps, we hope to:
 
 - Connect with me on [Linkedin](https://www.linkedin.com/in/aneeshkodali)
 - Read my [blog posts](https://medium.com/@aneesh.kodali)
-    - I actually wrote [one](https://medium.com/analytics-vidhya/eh-f-tests-run-anova-easier-with-args-e4a55f3be21d) in which I illustrate how to use **args** to conduct an ANOVA test more easily and applied it in our 2nd hypothesis test.
-- Check out some of my other [projects](https://github.com/aneeshkodali)
+    - I actually wrote [one](https://medium.com/analytics-vidhya/eh-f-tests-run-anova-easier-with-args-e4a55f3be21d) in which I illustrate how to use *args* to conduct an ANOVA test more easily and applied it in our 2nd hypothesis test.
+- Check out my other [projects](https://github.com/aneeshkodali)
