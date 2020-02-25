@@ -36,9 +36,9 @@ Not much data cleaning needed. The *home_team* and *visitor_team* columns contai
 
 For the first hypothesis test, we used *home_team_conference* and *visitor_team_conference* to filter the original dataframe to only contain rows where an East team plays a West team. We then subtracted *west_team_score* from *east_team_score* to obtain our variable of interest (*east_minus_west*).
 
-![East Minus West Boxplot](img/EastMinusWestBoxplot.png)
+![East Minus West Boxplot](img/EastVsWestBoxplot.png)
 
-![East Minus West Distplot](img/EastMinusWestDistplot.png)
+![East Minus West Distplot](img/EastVsWestDistplot.png)
 
 For the second hypothesis test, we created our variable of interest (*homeDiff*) by subtracting *visitor_team_score* from *home_team_score*.
 
